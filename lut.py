@@ -6,6 +6,7 @@ import smtplib
 from os import system
 
 def main():
+   system('clear')
    print '================================================='
    print '               CRIADO POR WINVASOR               '
    print '===================  2019  ======================'
