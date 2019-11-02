@@ -4,7 +4,7 @@
 
 import socket
 from os import system
-print "\n\n\a\tAVISO: O arquivo de log ficara na pasta libs\n\n"
+print ("\n\n\a\tAVISO: O arquivo de log ficara na pasta libs\n\n")
 site = raw_input("Insira o Server ==> ")
 count = 1
 print ('\n\a\t' + site + '\n\n\n')
