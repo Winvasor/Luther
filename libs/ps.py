@@ -15,7 +15,7 @@ while count <= 999999:
 	if code == 0:
 		count2 = str(count)
 		system('echo "' + count2 + ' OPEN" >> libs/log-port_scan.txt')
-		print count, "\a\tOPEN"
+		print (count, "\a\tOPEN")
 	else:
 		print (count, "\a\tCLOSE")
 	count = count + 1
