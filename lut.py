@@ -23,11 +23,12 @@ def main():
    print '  |    |___|  |  /|  | |   Y  \  ___/|  | \/ '
    print '  |_______ \____/ |__| |___|  /\___ \|__|    '
    print '          \/                \/     \/     1.3'
-
+   print AZ+'\a\tRun in Root User'+A
 def indie():	
 	print '[1] LUTHER-GMAIL'
 	print '[2] LUTHER-FTP'
 	print '[3] LUTHER-PORTSCAN'
+	print '[4] UPGRADE-LUTHER'
 	print '[0] SAIR\n'
 	
 	OPCAO = input('==>')
@@ -45,6 +46,8 @@ def indie():
 	elif OPCAO == 0:
 	   print AZ+'\nADEUS!!!\n\n'+NOR
 	   exit()
+	elif OPCAO ==4:
+		system('cd .. && rm -r Luther && git clone https://github.com/Winvasor/Luther.git && cd Luther && python2 lut.py')
 	else:
 	   system('clear')
 	   print AZ+'\n#404 NOT FOUND\n'+NOR
