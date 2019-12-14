@@ -31,22 +31,22 @@ def indie():
 	print '[4] UPGRADE-LUTHER'
 	print '[0] SAIR\n'
 	
-	OPCAO = input('==>')
-	
-	if OPCAO == 1:
+	OPCAO = raw_input('==>')
+
+	if OPCAO == "1":
 	   system('python2 libs/brute.py')
 
-	elif OPCAO == 2:
+	elif OPCAO == "2":
 		ip = raw_input('INSIRA O HOSTNAME/IP: ')
 		user = raw_input('INSIRA O NOME DE USUARIO: ')
 		PASS = raw_input('INSIRA A WORDLIST: ')
 		system('python2 libs/ftp.py -t '+ip+' -u '+user+' -w '+PASS)
-	elif OPCAO == 3:
+	elif OPCAO == "3":
 		system('python libs/ps.py')
-	elif OPCAO == 0:
+	elif OPCAO == "0":
 	   print AZ+'\nADEUS!!!\n\n'+NOR
 	   exit()
-	elif OPCAO ==4:
+	elif OPCAO =="4":
 		system('cd .. && rm -r Luther && git clone https://github.com/Winvasor/Luther.git && cd Luther && python2 lut.py')
 	else:
 	   system('clear')
