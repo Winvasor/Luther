@@ -22,7 +22,7 @@ def main():
    print '  |    |   |  |  \   __\  |  \_/ __ \_  __ \ '
    print '  |    |___|  |  /|  | |   Y  \  ___/|  | \/ '
    print '  |_______ \____/ |__| |___|  /\___ \|__|    '
-   print '          \/                \/     \/     1.3'
+   print '          \/                \/     \/     1.5'
    print AZ+'\a\tRun in Root User'+A
 def indie():	
 	print '[1] LUTHER-GMAIL'
