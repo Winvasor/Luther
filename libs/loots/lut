@@ -1,0 +1,4 @@
+#!/usr/bin/python
+
+from os import system
+system('python /opt/Luther-framework/lut.py')
