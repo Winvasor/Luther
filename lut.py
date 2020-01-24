@@ -16,16 +16,15 @@ NOR = '\033[0;0m'
 system('clear')
 def main():
    print NEGRI+A+'================================================'
-   print '               CRIADO POR'+AZ+' WINVASOR'+A
+   print '               CRIADO POR'+AZ+' \033[05mWINVASOR\033[25m'+A
    print '===================  2020  ====================='
    print '   ____            __  ___                   '
    print '  |    |    __ ___/  |_|  |__   ___________  ' 
    print '  |    |   |  |  \   __\  |  \_/ __ \_  __ \ '
    print '  |    |___|  |  /|  | |   Y  \  ___/|  | \/ '
    print '  |_______ \____/ |__| |___|  /\___ \|__|    '
-   print '          \/                \/     \/     1.8'
-def checkConnection(host='https://google.com'):  # Connection check
-    system('clear')
+   print '          \/                \/     \/     1.9'
+def checkConnection(host='https://google.com'):
     try:
         req = requests.get(host, timeout=10)
         if req.status_code == 200:
@@ -35,16 +34,16 @@ def checkConnection(host='https://google.com'):  # Connection check
 
 
 if checkConnection() == False:
-    print(NEGRI+AZ+'\n\n\a Nenhuma Rede Detectada, conecte-se a internet!!!\n\n')
+    print(NEGRI+AZ+'\n\n\a \033[05mNenhuma Rede Detectada, conecte-se a internet!!!\033[25m\n\n')
     exit()
 
 if getuid() == 0:
 	print('')
 else:
-    print (NEGRI)
+    print (NEGRI+'\033[05m')
     print(
     "{0}\aExecute o Luther-Framework no '{1}sudo{0}'".format(AZ, A))
-    print ('\n\n')
+    print ('\n\n\033[25m')
     exit()
 
 
@@ -75,13 +74,13 @@ def indie():
 	elif OPCAO == "":
 		system('clear')
 		main()
-		print(AZ+'\n\nNenhuma alternativa selecionada!!!\n\n'+A)
+		print(AZ+'\n\n\033[05mNenhuma alternativa selecionada!!!\033[25m\n\n'+A)
 		indie()
 		
 	else:
 	   system('clear')
-	   print AZ+'\n#404 NOT FOUND\n'+NOR
 	   main()
+	   print AZ+'\n\033[05mEssa alternativa nao existe\033[25m\n'+A
 	   indie()
 main()
 indie()
