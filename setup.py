@@ -4,7 +4,6 @@
 
 from os import system
 
-#system('pip install -r requiriments.txt')
 try:
 	system('cp libs/loots/lut /usr/bin/ && chmod +x /bin/lut')
 	system('cp -r libs/loots/Luther-framework/ /opt/')
