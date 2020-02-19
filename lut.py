@@ -53,7 +53,7 @@ else:
 def indie():	
 	print '[1] LUTHER-GMAIL'
 	print '[2] LUTHER-PORTSCAN'
-	print '[3] LUTTHER-FACE-BRUTE'
+	print '[3] LUTHER-FACE-BRUTE'
 	print '[4] UPGRADE-LUTHER'
 	print '[0] SAIR\n'
 	
