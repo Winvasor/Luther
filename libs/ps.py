@@ -32,7 +32,18 @@ try:
 			print count, "\a\tOPEN"
 		else:
 				print count, "\a\tCLOSE"
-		count = count + 1	
+		count = count + 1
+		if count == 65535:
+		    try:
+			system("clear")
+			port_img()
+			system('cat '+ caminholog + site +'-log-port.txt')
+
+		    except:
+		        print("Nenhuma Port Aberta encontrada")
+
+			
+			
 		
 except KeyboardInterrupt as e:
 	try:
